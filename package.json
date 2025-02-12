@@ -1,0 +1,23 @@
+{
+  "name": "lab4-platform-client-chikwandachisha",
+  "version": "1.0.0",
+  "description": "CS52 Lab 4 Platform Client",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^7.1.5",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
