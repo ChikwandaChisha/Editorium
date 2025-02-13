@@ -9,7 +9,7 @@ export default function Post() {
 
   const current = useStore((state) => state.postSlice.current);
   const fetchPost = useStore((state) => state.postSlice.fetchPost);
-  const deletPost = useStore((state) => state.postSlice.deletPost)
+  const deletePost = useStore((state) => state.postSlice.deletePost)
   const updatePost = useStore((state) => state.postSlice.updatePost)
   
 
@@ -50,15 +50,21 @@ export default function Post() {
   const handleDelete = async () => {
     try {
       await deletePost(postID);
+      toast.success("Post deleted successfully");
       navigate('/');
     } catch (error) {
       toast.error(`Error deleting post: ${error.message}`);
     }
   };
 
+
   if (!current || !current.id) {
     return <div>Loading post...</div>;
   }
+  console.log("Cover URL:", current.coverUrl);
+  console.log("Delete function:", deletePost);
+
+
 
   return (
     <div className="post-container">

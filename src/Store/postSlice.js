@@ -74,6 +74,8 @@ const createPostSlice = (set, get) => ({
       toast.error(`Error deleting post: ${error.message}`);
     }
   },
+
+
 });
 
 export default createPostSlice;

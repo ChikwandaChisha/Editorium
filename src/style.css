@@ -1,200 +1,206 @@
-/* src/styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #F7F7F7;
     margin: 0;
     padding: 0;
-  }
-  
-  nav {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(247, 247, 247, 0.8), rgba(247, 247, 247, 0.8)), url('./assets/images/background_img3.webp') no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
     display: flex;
     gap: 20px;
-    background-color: #333;
+    background-color: #ddf1ff;
     padding: 10px;
-  }
-  
-  nav a {
-    color: white;
+}
+
+nav a {
+    color: #333333;
     text-decoration: none;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     text-decoration: underline;
-  }
-  .navbar {
+}
+
+.navbar {
     display: flex;
     gap: 20px;
-    background-color: #333;
+    background-color: #5DADE2;
     padding: 10px;
-  }
-  
-  .nav-link {
-    color: white;
+}
+
+.nav-link {
+    color: #333333;
     text-decoration: none;
     padding: 8px 12px;
     transition: 0.3s;
-  }
-  
-  .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 128, 128, 0.2); 
     border-radius: 5px;
-  }
-  
-  
-  .posts-container {
+}
+
+.posts-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-  }
-  
-  .post-tile {
-    background: white;
+}
+
+.post-tile {
+    background: #d2e2e8; 
     padding: 15px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post-tile img {
+    transition: transform 0.3s;
+}
+
+.post-tile img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
+}
+
+button {
+    background-color: #5DADE2; 
+    color: #F7F7F7;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  
+}
 
+button:hover {
+    background-color: #008080;
+}
 
-  
-  /* POST.JSX */
-  .post-container {
+/* POST.JSX */
+.post-container {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
-    background: white;
+    background: #d2e2e7; 
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .post-cover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post-cover {
     width: 100%;
     height: auto;
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
-  }
-  
-  .post-title {
+}
+
+.post-title {
     font-size: 24px;
     font-weight: bold;
     margin: 10px 0;
-  }
-  
-  .post-tags {
+    color: #333333;
+}
+
+.post-tile p {
+    color: #777777;
+}
+
+.post-tags {
     font-style: italic;
-    color: gray;
-  }
-  
-  .post-content {
+    color: #008080; 
+}
+
+.post-content {
     margin-top: 10px;
     line-height: 1.5;
-  }
-  
-  .post-actions {
+}
+
+.post-actions {
     display: flex;
     gap: 10px;
     margin-top: 15px;
-  }
-  
-  .edit-btn,
-  .delete-btn,
-  .save-btn,
-  .cancel-btn {
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .edit-btn {
-    background-color: #2cb34e;
-    color: white;
-  }
-  
-  .delete-btn {
-    background-color: #a02b37;
-    color: white;
-  }
-  
-  .save-btn {
-    background-color: #376ead;
-    color: white;
-  }
-  
-  .cancel-btn {
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .edit-btn:hover {
-    background-color: #218838;
-  }
-  
-  .delete-btn:hover {
-    background-color: #c82333;
-  }
-  
-  .save-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .cancel-btn:hover {
-    background-color: #5a6268;
-  }
-  
-  /* Edit form */
-  .edit-form {
+}
+
+.edit-btn {
+    background-color: #008080; 
+    color: #F7F7F7;
+}
+
+.delete-btn {
+    background-color: #F08080; 
+    color: #F7F7F7;
+}
+
+.save-btn {
+    background-color: #008080; 
+    color: #F7F7F7;
+}
+
+.cancel-btn {
+    background-color: #777777; 
+    color: #F7F7F7;
+}
+
+.edit-btn:hover {
+    background-color: #006666;
+}
+
+.delete-btn:hover {
+    background-color: #E06666;
+}
+
+.save-btn:hover {
+    background-color: #006666;
+}
+
+.cancel-btn:hover {
+    background-color: #666666;
+}
+
+/* Edit form */
+.edit-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  
-  .form-label {
+}
+
+.form-label {
     font-weight: bold;
-  }
-  
-  .input-field, .textarea-field {
-    width: 50%;
+}
+
+.input-field, .textarea-field {
+    width: 600px;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #e6ebee;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-  }
-  
-  .textarea-field {
+    background-color: #d2e2e7; 
+    color: #333333;
+}
+
+.textarea-field {
     height: 100px;
     resize: none;
-  }
-  
-  .loading-message {
+}
+
+.loading-message {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: gray;
-  }
-  
+    color: #777777;
+}
+
