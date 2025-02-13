@@ -80,7 +80,7 @@ button:hover {
 
 /* POST.JSX */
 .post-container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 30px auto;
     padding: 20px;
     background: #d2e2e7; 
@@ -91,7 +91,7 @@ button:hover {
 .post-cover {
     width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 450px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -193,7 +193,7 @@ button:hover {
 }
 
 .textarea-field {
-    height: 100px;
+    height: 150px;
     resize: none;
 }
 
@@ -204,3 +204,70 @@ button:hover {
     color: #777777;
 }
 
+/* Media Queries, with the assistance of chat */
+@media screen and (max-width: 768px) {
+    .posts-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .post-container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .input-field, .textarea-field {
+        width: 100%;
+    }
+
+    .post-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .edit-btn,
+    .delete-btn,
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav, .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .post-tile {
+        padding: 10px;
+    }
+
+    .post-cover {
+        max-height: 200px;
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
