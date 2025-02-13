@@ -131,17 +131,17 @@ body {
   }
   
   .edit-btn {
-    background-color: #28a745;
+    background-color: #2cb34e;
     color: white;
   }
   
   .delete-btn {
-    background-color: #dc3545;
+    background-color: #a02b37;
     color: white;
   }
   
   .save-btn {
-    background-color: #007bff;
+    background-color: #376ead;
     color: white;
   }
   
@@ -178,10 +178,12 @@ body {
   }
   
   .input-field, .textarea-field {
-    width: 100%;
+    width: 50%;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
   }
   
   .textarea-field {

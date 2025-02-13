@@ -7,12 +7,11 @@ export default function Post() {
   const { postID } = useParams();
   const navigate = useNavigate();
 
-  const { current, fetchPost, deletePost, updatePost } = useStore((state) => ({
-    current: state.postSlice.current,
-    fetchPost: state.postSlice.fetchPost,
-    deletePost: state.postSlice.deletePost,
-    updatePost: state.postSlice.updatePost,
-  }));
+  const current = useStore((state) => state.postSlice.current);
+  const fetchPost = useStore((state) => state.postSlice.fetchPost);
+  const deletPost = useStore((state) => state.postSlice.deletPost)
+  const updatePost = useStore((state) => state.postSlice.updatePost)
+  
 
   // Local component state to hold edit fields
   const [editing, setEditing] = useState(false);
