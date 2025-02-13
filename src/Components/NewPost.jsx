@@ -30,40 +30,23 @@ export default function NewPost() {
     }
   };
 
-  return (
-    <div>
-      <h2>Create New Post</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <label htmlFor="tags">Tags</label>
-        <input
-          type="text"
-          id="tags"
-          value={tags}
-          onChange={(e) => setTags(e.target.value)}
-        />
-        <label htmlFor="coverUrl">Cover URL</label>
-        <input
-          type="text"
-          id="coverUrl"
-          value={coverUrl}
-          onChange={(e) => setCoverUrl(e.target.value)}
-        />
-        <label htmlFor="content">Content</label>
-        <textarea
-          id="content"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          required
-        />
-        <button type="submit">Create</button>
+ return (
+    <div className="new-post-container">
+      <h2 className="form-title">Create New Post</h2>
+      <form onSubmit={handleSubmit} className="post-form">
+        <label htmlFor="title" className="form-label">Title</label>
+        <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} className="input-field" required />
+
+        <label htmlFor="tags" className="form-label">Tags</label>
+        <input type="text" id="tags" value={tags} onChange={(e) => setTags(e.target.value)} className="input-field" />
+
+        <label htmlFor="coverUrl" className="form-label">Cover URL</label>
+        <input type="text" id="coverUrl" value={coverUrl} onChange={(e) => setCoverUrl(e.target.value)} className="input-field" />
+
+        <label htmlFor="content" className="form-label">Content</label>
+        <textarea id="content" value={content} onChange={(e) => setContent(e.target.value)} className="textarea-field" required />
+
+        <button type="submit" className="submit-btn">Create</button>
       </form>
     </div>
   );

@@ -62,36 +62,36 @@ export default function Post() {
   }
 
   return (
-    <div>
+    <div className="post-container">
       {!editing ? (
         <>
-          {current.coverUrl && <img src={current.coverUrl} alt="cover" />}
-          <h2>{current.title}</h2>
-          <p>Tags: {current.tags}</p>
-          <div>Content: {current.content}</div>
-          <button onClick={() => setEditing(true)}>Edit</button>
-          <button onClick={handleDelete}>Delete</button>
+          {current.coverUrl && <img src={current.coverUrl} alt="cover" className="post-cover" />}
+          <h2 className="post-title">{current.title}</h2>
+          <p className="post-tags">Tags: {current.tags}</p>
+          <div className="post-content">{current.content}</div>
+          <div className="post-actions">
+            <button className="edit-btn" onClick={() => setEditing(true)}>Edit</button>
+            <button className="delete-btn" onClick={handleDelete}>Delete</button>
+          </div>
         </>
       ) : (
-        <div>
-          <label htmlFor="edit-title">Title</label>
-          <input id="edit-title" value={title} onChange={(e) => setTitle(e.target.value)} />
-          <label htmlFor="edit-tags">Tags</label>
-          <input id="edit-tags" value={tags} onChange={(e) => setTags(e.target.value)} />
-          <label htmlFor="edit-coverUrl">Cover URL</label>
-          <input
-            id="edit-coverUrl"
-            value={coverUrl}
-            onChange={(e) => setCoverUrl(e.target.value)}
-          />
-          <label htmlFor="edit-content">Content</label>
-          <textarea
-            id="edit-content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
-          <button onClick={handleUpdate}>Save</button>
-          <button onClick={() => setEditing(false)}>Cancel</button>
+        <div className="edit-form">
+          <label htmlFor="edit-title" className="form-label">Title</label>
+          <input id="edit-title" value={title} onChange={(e) => setTitle(e.target.value)} className="input-field" />
+
+          <label htmlFor="edit-tags" className="form-label">Tags</label>
+          <input id="edit-tags" value={tags} onChange={(e) => setTags(e.target.value)} className="input-field" />
+
+          <label htmlFor="edit-coverUrl" className="form-label">Cover URL</label>
+          <input id="edit-coverUrl" value={coverUrl} onChange={(e) => setCoverUrl(e.target.value)} className="input-field" />
+
+          <label htmlFor="edit-content" className="form-label">Content</label>
+          <textarea id="edit-content" value={content} onChange={(e) => setContent(e.target.value)} className="textarea-field" />
+
+          <div className="post-actions">
+            <button className="save-btn" onClick={handleUpdate}>Save</button>
+            <button className="cancel-btn" onClick={() => setEditing(false)}>Cancel</button>
+          </div>
         </div>
       )}
     </div>
