@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { toast } from 'react-toastify'; // or your error handling method
+import { toast } from 'react-toastify'; 
 
 const ROOT_URL = 'https://platform.cs52.me/api';
 const API_KEY = '?key=c_chisha'; 

@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import {create} from "zustand";
 import createPostSlice from './postSlice'; 
 
 const useStore = create((set, get) => ({
