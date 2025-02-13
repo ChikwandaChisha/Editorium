@@ -3,7 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
+  server: {
+    port: 3000,
+  },
+  build: {
+    outDir: 'dist',
   },
 });
