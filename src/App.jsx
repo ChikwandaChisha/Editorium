@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/Navbar';
-import Posts from './components/Posts';
-import Post from './components/Post';
-import NewPost from './components/NewPost';
+import NavBar from './Components/Navbar.jsx';
+import Posts from './Components/Posts.jsx';
+import Post from './Components/Post.jsx';
+import NewPost from './Components/NewPost.jsx';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

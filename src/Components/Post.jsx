@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import useStore from '../store';
+import useStore from '../Store/index';
 import { toast } from 'react-toastify';
 
 export default function Post() {

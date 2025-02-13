@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useStore from '../store/index.js';
+import useStore from '../Store/index.js';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 

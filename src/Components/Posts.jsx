@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useStore from '../store/index';
+import useStore from '../Store/index';
 import { toast } from 'react-toastify';
 
 export default function Posts() {
